@@ -1,7 +1,65 @@
+// Global variables tracking score for each language
+var cSharpScore = 0;
+var javaScore = 0;
+var phpScore = 0;
+var rubyScore = 0;
+var cssScore = 0;
+var lolcodeScore = 0;
+
+// Increments global language scores based on quiz answers
+var scoreQuestionResult = function(result) {
+  if (result === "C#") {
+    cSharpScore++;
+  }
+  else if (result === "Java") {
+    javaScore++;
+  }
+  else if (result === "PHP") {
+    phpScore++;
+  }
+  else if (result === "Ruby") {
+    rubyScore++;
+  }
+  else if (result === "CSS") {
+    cssScore++;
+  }
+  else if (result === "Lolcode") {
+    lolcodeScore++;
+  }
+}
+
+// Calculates quiz result based on score stored in global variables
+// Returns string denoting result
+var calculateResult = function() {
+  for (i = 5; i > 0; i--) {
+    if (cSharpScore === i) {
+      return "C#";
+    }
+    else if (javaScore === i) {
+      return "Java";
+    }
+    else if (phpScore === i) {
+      return "PHP";
+    }
+    else if (rubyScore === i) {
+      return "Ruby";
+    }
+    else if (cssScore === i) {
+      return "CSS";
+    }
+    else if (lolcodeScore === i) {
+      return "Lolcode";
+    }
+  }
+}
+
+
+// Hides current page and shows next with jQuery effect
 var goToNextPage = function(currentPage, nextPage) {
   currentPage.slideUp();
   nextPage.slideDown();
 }
+
 
 $(document).ready(function() {
   // User info variables
@@ -32,6 +90,7 @@ $(document).ready(function() {
   $("#quiz-q1 form").submit(function(event) {
     event.preventDefault();
     q1Answer = $("#quiz-q1 input:radio[name=quiz]:checked").val();
+    scoreQuestionResult(q1Answer);
     goToNextPage($("#quiz-q1"), $("#quiz-q2"));
   });
 
@@ -39,6 +98,7 @@ $(document).ready(function() {
   $("#quiz-q2 form").submit(function(event) {
     event.preventDefault();
     q2Answer = $("#quiz-q2 input:radio[name=quiz]:checked").val();
+    scoreQuestionResult(q2Answer);
     goToNextPage($("#quiz-q2"), $("#quiz-q3"));
   });
 
@@ -46,6 +106,7 @@ $(document).ready(function() {
   $("#quiz-q3 form").submit(function(event) {
     event.preventDefault();
     q3Answer = $("#quiz-q3 input:radio[name=quiz]:checked").val();
+    scoreQuestionResult(q3Answer);
     goToNextPage($("#quiz-q3"), $("#quiz-q4"));
   });
 
@@ -53,6 +114,7 @@ $(document).ready(function() {
   $("#quiz-q4 form").submit(function(event) {
     event.preventDefault();
     q4Answer = $("#quiz-q4 input:radio[name=quiz]:checked").val();
+    scoreQuestionResult(q4Answer);
     goToNextPage($("#quiz-q4"), $("#quiz-q5"));
   });
 
@@ -60,10 +122,16 @@ $(document).ready(function() {
   $("#quiz-q5 form").submit(function(event) {
     event.preventDefault();
     q5Answer = $("#quiz-q5 input:radio[name=quiz]:checked").val();
+    scoreQuestionResult(q5Answer);
+
+    var result = calculateResult();
+
     goToNextPage($("#quiz-q5"), $("#result"));
 
-    // console.log(userName, userAge, userAbout);
-    // console.log(q1Answer, q2Answer, q3Answer, q4Answer, q5Answer);
+    console.log(userName, userAge, userAbout);
+    console.log(q1Answer, q2Answer, q3Answer, q4Answer, q5Answer);
+    console.log(cSharpScore, javaScore, phpScore, rubyScore, cssScore, lolcodeScore)
+    console.log(result);
   });
 
   // Restart button
