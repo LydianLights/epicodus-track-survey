@@ -3,6 +3,16 @@ var goToNextPage = function(currentPage, nextPage) {
   nextPage.slideDown();
 }
 
+// User info variables
+var userName;
+var userAge;
+var userAbout;
+var q1Answer;
+var q2Answer;
+var q3Answer;
+var q4Answer;
+var q5Answer;
+
 $(document).ready(function() {
   // Quiz start button
   $("#btn-quiz-start").click(function() {
