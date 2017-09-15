@@ -1,3 +1,22 @@
 .initially-hidden {
   display: none;
 }
+
+body {
+  background-color: #cee0ff;
+}
+
+.container {
+  background-color: #fefefe;
+  max-width: 900px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 150px;
+  margin-bottom: 100px;
+  border-bottom-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+}
+
+.page-header .jumbotron {
+  background-color: #e3eaf7;
+}

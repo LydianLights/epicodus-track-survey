@@ -146,10 +146,10 @@ $(document).ready(function() {
 
     goToNextPage($("#quiz-q5"), $("#result"));
 
-    console.log(userFirstName, userLastName, userAge, userAbout);
-    console.log(q1Answer, q2Answer, q3Answer, q4Answer, q5Answer);
-    console.log(cSharpScore, javaScore, phpScore, rubyScore, cssScore, lolcodeScore)
-    console.log(result);
+    // console.log(userFirstName, userLastName, userAge, userAbout);
+    // console.log(q1Answer, q2Answer, q3Answer, q4Answer, q5Answer);
+    // console.log(cSharpScore, javaScore, phpScore, rubyScore, cssScore, lolcodeScore)
+    // console.log(result);
   });
 
   // Restart button
