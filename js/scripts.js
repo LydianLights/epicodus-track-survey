@@ -54,4 +54,9 @@ $(document).ready(function() {
     event.preventDefault();
     goToNextPage($("#quiz-q5"), $("#result"));
   });
+
+  // Restart button
+  $("#btn-quiz-restart").click(function() {
+    location.reload(true);
+  });
 });
