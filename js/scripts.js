@@ -26,7 +26,7 @@ var scoreQuestionResult = function(result) {
   else if (result === "Lolcode") {
     lolcodeScore++;
   }
-}
+};
 
 // Calculates quiz result based on score stored in global variables
 // Returns string denoting result
@@ -51,14 +51,25 @@ var calculateResult = function() {
       return "Lolcode";
     }
   }
-}
+};
+
+// Returns a filepath string pointing to the result language logo
+var getResultLogo = function(result) {
+  // C# has illegal characters in name
+  if (result === "C#") {
+    return "img/CSharp.png";
+  }
+  else {
+    return "img/" + result + ".png";
+  }
+};
 
 
 // Hides current page and shows next with jQuery effect
 var goToNextPage = function(currentPage, nextPage) {
   currentPage.slideUp();
   nextPage.slideDown();
-}
+};
 
 
 $(document).ready(function() {
@@ -131,6 +142,7 @@ $(document).ready(function() {
     // Generate results page
     $(".result-first-name").text(userFirstName);
     $(".result-language-name").text(result);
+    $(".result-language-logo").attr("src", getResultLogo(result));
 
     goToNextPage($("#quiz-q5"), $("#result"));
 
