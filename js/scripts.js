@@ -63,7 +63,8 @@ var goToNextPage = function(currentPage, nextPage) {
 
 $(document).ready(function() {
   // User info variables
-  var userName;
+  var userFirstName;
+  var userLastName;
   var userAge;
   var userAbout;
   var q1Answer;
@@ -80,7 +81,8 @@ $(document).ready(function() {
   // Quiz-intro button
   $("#quiz-intro form").submit(function(event) {
     event.preventDefault();
-    userName = $("#input-name").val();
+    userFirstName = $("#input-first-name").val();
+    userLastName = $("#input-last-name").val();
     userAge = $("#input-age").val();
     userAbout = $("#input-about").val();
     goToNextPage($("#quiz-intro"), $("#quiz-q1"));
@@ -126,9 +128,13 @@ $(document).ready(function() {
 
     var result = calculateResult();
 
+    // Generate results page
+    $(".result-first-name").text(userFirstName);
+    $(".result-language-name").text(result);
+
     goToNextPage($("#quiz-q5"), $("#result"));
 
-    console.log(userName, userAge, userAbout);
+    console.log(userFirstName, userLastName, userAge, userAbout);
     console.log(q1Answer, q2Answer, q3Answer, q4Answer, q5Answer);
     console.log(cSharpScore, javaScore, phpScore, rubyScore, cssScore, lolcodeScore)
     console.log(result);
