@@ -41,3 +41,19 @@ button {
 #quiz button {
   margin-top: 15px;
 }
+
+.result-header {
+  margin-bottom: 30px;
+}
+
+.result-header h1 {
+  font-size: 80px;
+}
+
+.result-body img {
+  float: left;
+  max-width: 100px;
+  margin-top: 15px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
