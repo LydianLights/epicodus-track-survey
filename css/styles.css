@@ -30,7 +30,7 @@ button {
   background-color: #e0e0e0;
 }
 
-#btn-quiz-start {
+.btn-centered {
   display: block;
   margin: auto;
   margin-top: 50px;
