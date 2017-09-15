@@ -10,14 +10,14 @@
   </head>
   <body>
     <div class="container">
-      <div class="header">
+      <div class="page-header">
         <div class="jumbotron">
           <h1>Which Programming Language Suits You Best?</h1>
           <h2>Take our quiz to find out:</h2>
         </div>
       </div>
 
-      <div class="body">
+      <div class="page-body">
         <div class="intro">
           <h1>So Many Choices...</h1>
           <p>
@@ -30,12 +30,37 @@
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <button class="btn" id="btn-quiz-start" type="button">Take The Quiz!</button>
+          <button id="btn-quiz-start" class="btn" type="button">Take The Quiz!</button>
+        </div>
+        <div class="quiz">
+          <div id="quiz-intro">
+            <h1>First tell us a little about yourself</h1>
+            <form>
+              <div class="form-group">
+                <label for="input-name">Your Name: *</label>
+                <input id="input-name" class="form-control" type="text" value="Name" required>
+              </div>
+              <div class="form-group">
+                <label for="input-age">How old are you?</label>
+                <input id="input-age" class="form-control" type="text" value="Age">
+              </div>
+              <div class="form-group">
+                <label for="input-age">Tell us a little bit about why you'd like to learn to program:</label>
+                <textarea id="input-age" class="form-control" type="text"></textarea>
+              </div>
+              <button class="btn" type="submit">Continue >></button>
+            </form>
+          </div>
+
+          <div id="quiz-q1">
+          </div>
         </div>
 
+        <div class="result">
+        </div>
       </div>
 
-      <div class="result">
+      <div class="page-footer">
       </div>
     </div>
   </body>
