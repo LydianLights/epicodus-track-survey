@@ -2,7 +2,7 @@
 
 #### _Web-based tool to aid students in choosing a programming language_
 
-#### By _**{List of contributors}**_
+#### By _**Rane Fields**_
 
 ## Description
 
