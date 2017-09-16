@@ -27,7 +27,7 @@ _This project is a simple html page with linked css and js files. It makes use o
 
 ## Known Bugs
 
-_No bugs are known at this time._
+* _If the user enters an extremely long first name, the results screen text can potentially overflow._
 
 ### License
 
